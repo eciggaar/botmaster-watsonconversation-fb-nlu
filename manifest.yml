@@ -1,0 +1,23 @@
+---
+declared-services:
+  conversation-service-nlu:
+    label: conversation
+    plan: free
+  natural-language-understanding-service:
+    label: natural-language-understanding
+    plan: free
+applications:
+- path: .
+  memory: 256M
+  instances: 1
+  name: watson-botmaster-nlu
+  host: eci-watson-botmaster-nlu
+  disk_quota: 512M
+  services:
+  - conversation-service-nlu
+  - natural-language-understanding-service
+  env:
+    FACEBOOK_APP_SECRET: <your_facebook_app_secret>
+    FACEBOOK_VERIFY_TOKEN: <your_facebook_verify_token>
+    FACEBOOK_PAGE_TOKEN: <your_facebook_page_token>
+    WATSON_WORKSPACE_ID: <your_workspace_id>
