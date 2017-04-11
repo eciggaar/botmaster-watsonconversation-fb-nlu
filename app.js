@@ -21,7 +21,6 @@ botmaster.use({
   controller: watsonConversationStorageMiddleware.retrieveSession
 });
 
-botmaster.use(incomingMiddleware.weather.addWeatherInfoToUpdate);
 botmaster.use(incomingMiddleware.userInfo.addUserInfoToUpdate);
 botmaster.use(incomingMiddleware.reply.replyToUser);
 

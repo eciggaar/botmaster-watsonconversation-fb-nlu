@@ -32,8 +32,8 @@ const watsonConversationCredentials = {
 
 // Settings for IBM Weather Company Data service
 const watsonNLUCredentials = {
-    username: (appEnv.isLocal) ? process.env.WEATHER_USERNAME : appEnv.getServiceCreds('natural-language-understanding').username,
-    password: (appEnv.isLocal) ? process.env.WEATHER_PASSWORD : appEnv.getServiceCreds('natural-language-understanding').password,
+    username: (appEnv.isLocal) ? process.env.WATSON_NLU_USERNAME : appEnv.getServiceCreds('natural-language-understanding').username,
+    password: (appEnv.isLocal) ? process.env.WATSON_NLU_PASSWORD : appEnv.getServiceCreds('natural-language-understanding').password,
     version: 'v1',
     version_date: '2017-02-27'
 };
