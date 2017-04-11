@@ -24,16 +24,16 @@ const messengerCredentials = {
 
 // Settings for Watson conversation service
 const watsonConversationCredentials = {
-    username: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_USERNAME : appEnv.getServiceCreds('conversation-service-basic').username,
-    password: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_PASSWORD : appEnv.getServiceCreds('conversation-service-basic').password,
+    username: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_USERNAME : appEnv.getServiceCreds('conversation-service-nlu').username,
+    password: (appEnv.isLocal) ? process.env.WATSON_CONVERSATION_PASSWORD : appEnv.getServiceCreds('conversation-service-nlu').password,
     version: 'v1',
     version_date: '2017-02-03',
 };
 
 // Settings for IBM Weather Company Data service
 const watsonNLUCredentials = {
-    username: (appEnv.isLocal) ? process.env.WATSON_NLU_USERNAME : appEnv.getServiceCreds('natural-language-understanding').username,
-    password: (appEnv.isLocal) ? process.env.WATSON_NLU_PASSWORD : appEnv.getServiceCreds('natural-language-understanding').password,
+    username: (appEnv.isLocal) ? process.env.WATSON_NLU_USERNAME : appEnv.getServiceCreds('watson-nlu-service').username,
+    password: (appEnv.isLocal) ? process.env.WATSON_NLU_PASSWORD : appEnv.getServiceCreds('watson-nlu-service').password,
     version: 'v1',
     version_date: '2017-02-27'
 };
