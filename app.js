@@ -9,7 +9,7 @@ const watsonConversationStorageMiddleware = require('./middleware/watson_convers
 // Initialize messenger bot
 messengerBot = new MessengerBot(config.messengerCredentials);
 
-// Define botmaster and add different bottypes (in this case only messenger)
+// Define botmaster and add different bot-types (in this case only messenger)
 const botmaster = new Botmaster(config.botmasterSettings);
 
 botmaster.addBot(messengerBot);
